@@ -1,0 +1,10 @@
+# Розрахунок питомої ентальпії робочого тіла
+import CoolProp.CoolProp as CP
+def HPTwf(p, T, wf):
+    return CP.PropsSI('H','P',p,'T',T,wf)
+
+wf = 'Water'
+p = 10e6
+T = 300+273.15
+h = HPTwf(p, T, wf)
+print(h)
